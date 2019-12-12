@@ -8,7 +8,7 @@ const dataSource = require('./datasource')
 
 app.use(cors());
 
-const port = 3000
+const port = process.env.PORT || 8080
 
 app.get('/api/v1/instances', (req, res) => {
 
