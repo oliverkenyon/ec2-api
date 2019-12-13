@@ -3,11 +3,6 @@ const api = require('./api.js')
 
 describe('API End-to-End', () => {
   
-  const testInstance = {
-    name: 'test instance 123',
-    ips: { public: 'public ip 456', private: ['private ip 789'] }
-  }
-
   it('should successfully return data', async () => {
     const res = await request(api.app)
         .get('/api/v1/instances')
