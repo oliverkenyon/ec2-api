@@ -8,12 +8,6 @@ describe('API End-to-End', () => {
     ips: { public: 'public ip 456', private: ['private ip 789'] }
   }
 
-  const sanityCheckInstance = (instance) => {
-    // Would have more assertions here in a real scenario
-    expect(instance.name).toBeTruthy()
-    expect(instance.id).toHaveLength(12)
-  }
-
   it('should successfully return data', async () => {
     const res = await request(api.app)
         .get('/api/v1/instances')
